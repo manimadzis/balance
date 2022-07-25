@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    container_name: postgres_compose
+    ports: 
+      - 5432:5432
+
+    environment:
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB:  accounts
+    
+    restart: always
+
+
+  app:
+    # image: balance
+    build: .
+    ports:
+      - 63000:63000
+    
+    container_name: balance_compose
+    links:
+      - db
+
+

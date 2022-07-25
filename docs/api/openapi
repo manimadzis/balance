@@ -1,0 +1,41 @@
+openapi: 3.0.2
+
+info:
+  title: DateTime
+  version: "1.0"
+  
+paths:
+
+  /balance:
+    get:
+      description: Получить баланс
+      responses:
+        '200':
+          description: Получен баланс
+          content:
+            application/json:
+              schema:
+                
+        '400':
+          description: Неверные входные данные
+      parameters:
+        - $ref: '#/components/parameters/id'
+
+
+
+        
+components:
+  parameters:
+    id:
+      in: query
+      name: id
+      schema:
+        type: integer
+
+  responses:
+    InvalidTZ:
+      description: Invalid timezone
+      
+      
+                  
+                  

@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/superfrog/go/src/balance'
+go mod tidy
+make: Leaving directory '/home/superfrog/go/src/balance'
+ 

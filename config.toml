@@ -1,0 +1,2 @@
+address = ":63000"
+db_connection_string = "postgres://postgres:pass@db/accounts?sslmode=disable"
